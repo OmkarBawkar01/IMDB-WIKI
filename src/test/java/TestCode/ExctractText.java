@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class ExctractText {
-    private WebDriver driver;
+     WebDriver driver;
 
     @BeforeClass
     public void setUp() {
@@ -34,11 +34,11 @@ public class ExctractText {
         String imdbCountry = driver.findElement(By.xpath("//a[text()='India']")).getText();
        
 
-        // Navigate to Wikipedia page for Pushpa: The Rise
+        // Navigate to WikiPedia page for Pushpa:The Rise
         
         driver.get("https://en.wikipedia.org/wiki/Pushpa:_The_Rise");
        
-        // Extract country and release date from Wikipedia page
+        // Extract country and release date from WikiPedia page
 
         String wikiReleaseDate = driver.findElement(By.xpath("//li[text()='17 December 2021']")).getText();
         String wikiCountry = driver.findElement(By.xpath("//td[text()='India']")).getText();
